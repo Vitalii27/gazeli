@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-295 303 13 188" enable-background="new -295 303 13 188" xml:space="preserve">
+<g>
+	<g transform="translate(-431 -770)">
+		<g>
+			<defs>
+				<circle id="SVGID_1_" cx="142.5" cy="1254.5" r="6.5"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  overflow="visible"/>
+			</clipPath>
+			<g clip-path="url(#SVGID_2_)">
+				<path id="fqlha" fill="#FFFFFF" fill-opacity="0" stroke="#6223ED" stroke-width="6" stroke-miterlimit="50" d="M142.5,1248
+					c3.6,0,6.5,2.9,6.5,6.5s-2.9,6.5-6.5,6.5s-6.5-2.9-6.5-6.5S138.9,1248,142.5,1248z"/>
+			</g>
+		</g>
+	</g>
+	<g transform="translate(-431 -770)">
+		<g>
+			<defs>
+				<rect id="SVGID_3_" x="141" y="1073" width="3" height="177"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  overflow="visible"/>
+			</clipPath>
+			<g clip-path="url(#SVGID_4_)">
+				<path id="fqlhb" fill="#FFFFFF" fill-opacity="0" stroke="#6223ED" stroke-width="6" stroke-miterlimit="50" d="M144,1250h-3
+					v-177h3V1250z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

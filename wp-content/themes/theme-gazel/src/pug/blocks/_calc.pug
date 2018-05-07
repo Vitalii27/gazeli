@@ -1,0 +1,338 @@
+mixin car(_image, _name, _price, _note)
+    label.b-calc-radio
+        a.b-calc-radio__help(href="#carmodal", data-modal-open): +svg('question').icon.icon-question
+        input.b-calc-radio__input(type="radio", name="type", value= _name, data-calc= _price)
+        span.b-calc-radio__img(style="background-image:url("+IMG_PATH+"car-type/"+_image+");")
+        span.b-calc-radio__label= _name
+        //- span.b-calc-radio__note= _note
+
+section.s-calc#calc(style="background-image:url("+IMG_PATH+"calc.jpg);")
+    .grid.grid--container
+        .s-calc__body
+            span.lines-circle.s-calc__decor
+            .b-title Узнать стоимость перевозки
+            .b-subtitle Выберите нужный автомобиль, введите адреса погрузки и разгрузки, при необходимости вставьте нужное время работ и необходимое количество грузчиков
+
+            .b-calc#calc-tabs
+                .b-calc-tabs
+                    .b-calc-tabs__item.active(data-tab-control="calc-moscow") Перевозки по Москве
+                    .b-calc-tabs__item(data-tab-control="calc-obl") Перевозки по Московской области
+                    .b-calc-tabs__item(data-tab-control="calc-russia") Перевозки по России
+                // .b-calc-tabs
+
+                form.b-calc-form#calc-moscow(action="#", data-tab="calc-moscow")
+                    .b-calc__section
+                        .b-calc__group.row
+                            .col.col--sm-3
+                                .b-calc-name Выберите автомобиль:
+                            .col.col--xl-9.col--lg-9
+                                .calc-slider
+                                    .calc-slider__body
+                                        +car(
+                                            'gazel.png', 'Газель обычная', '3000', '(3000 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                                        +car(
+                                            'gazel4m.png', 'Газель удлиненная 4м', '3600', '(3600 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                                        +car(
+                                            'gazel5m.png', 'Газель удлиненная 5м', '3600', '(3600 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                                        +car(
+                                            'gazel-long.png', 'Газель фермер', '3600', '(3600 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                                        +car(
+                                            'gazel-euro.png', 'Газель европлатформа', '3000', '(3000 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                        // .b-calc__group
+
+                        .b-calc__group.row.row--xs-center
+                            .col.col--sm-6.col--md-3
+                                .b-calc-name Укажите время:
+                            .col.col--sm-6.col--md-4.col--lg-3
+                                select.b-calc-select(name="time")
+                                    option(value="4" selected, data-calc="0") 4 часа
+                                    option(value="5", data-calc="600") 5 часов
+                                    option(value="6", data-calc="1200") 6 часов
+                                    option(value="7", data-calc="1800") 7 часов
+                                    option(value="8", data-calc="2400") 8 часов
+                            .col.col--md-5.col--lg-6
+                                .b-calc__note Минимальное время заказа машины - 4 часа
+                        // .b-calc__group
+                    // .b-calc__section
+
+                    .b-calc__section
+
+                        .b-calc__group.row
+                            .col.col--lg-3.col--sm-7
+                                .b-calc-name Грузчики
+                                    span.b-calc-name__note (на стоимость не влияет отсутствие грузовых лифтов):
+
+                            .col.col--lg-3.col--sm-5
+                                label.b-calc-radio
+                                    input.b-calc-radio__input(type="radio", name="person", value="1", data-calc="1")
+                                    span.b-calc-radio__label Да
+                                label.b-calc-radio
+                                    input.b-calc-radio__input(type="radio", name="person", value="0", checked, data-calc="0")
+                                    span.b-calc-radio__label Нет
+
+                            .col.col--lg-6.calc-person
+                                .row
+                                    .col.col--lg-6.col--sm-7
+                                        .b-calc-name Количество грузчиков:
+                                    .col.col--lg-6.col--sm-5
+                                        select.b-calc-select(name="person-items")
+                                            option(value="1", selected, data-calc="350") 1 человек
+                                            option(value="2", data-calc="700") 2 человека
+                                            option(value="3", data-calc="1050") 3 человека
+                                            option(value="4", data-calc="1400") 4 человека
+                                            option(value="5", data-calc="1750") 5 человек
+                        // .b-calc__group
+                    // .b-calc__section
+
+                    .b-calc__section
+
+                        .b-calc__group.row
+                            .col.col--sm-5
+                                label.b-calc-checkbox
+                                    input.b-calc-checkbox__input(type="checkbox", name="ttk", value="Нужен въезд в ТТК", data-calc="600")
+                                    span.b-calc-checkbox__checkbox: +svg('check').icon.icon-check
+                                    span.b-calc-checkbox__label Нужен въезд в ТТК?
+                            .col.col--sm-7
+                                label.b-calc-checkbox
+                                    input.b-calc-checkbox__input(type="checkbox", name="ring", value="Нужен въезд в садовое кольцо", data-calc="600")
+                                    span.b-calc-checkbox__checkbox: +svg('check').icon.icon-check
+                                    span.b-calc-checkbox__label Нужен въезд в садовое кольцо?
+                        // .b-calc__group
+                    // .b-calc__section
+
+                    .b-calc__footer
+                        //- p Цена за 1 машину: 700 #[span.cur &#8381;]
+                        p #[strong Предварительная сумма заказа]: #[span.b-calc__total #[span.calc-total 0] #[span.cur &#8381;] *] #[span.b-calc__control.button.button--base.calc-control(data-calc-total="0") Расчитать]
+
+                        .row.row--xs-center
+                            .col.col--lg-3.col--md-5.col--sm-5
+                                a.b-calc__button.button.button--round.button--white.calc-button(href="javascript:;", data-calc="calc-moscow") Оформить заказ
+                            //- .col.col--lg-9.col--md-7.col--sm-7
+                                //- .b-calc__note * - стоимость перевозки сборного груза уточняйте у опрератора
+                    // .b-calc__footer
+                // .b-calc-form
+
+                form.b-calc-form#calc-obl(action="javascript:;", data-tab="calc-obl", data-calc="Московская область")
+                    input(type="hidden", name="length-price", value="34")
+                    input(type="hidden", name="km", value="0")
+                    .b-calc__section
+                        .b-calc__group.row
+                            .col.col--sm-3
+                                .b-calc-name Выберите автомобиль:
+                            .col.col--xl-9.col--lg-9
+                                .calc-slider
+                                    .calc-slider__body
+                                        +car(
+                                            'gazel.png', 'Газель обычная', '3000', '(3000 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                                        +car(
+                                            'gazel4m.png', 'Газель удлиненная 4м', '3600', '(3600 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                                        +car(
+                                            'gazel5m.png', 'Газель удлиненная 5м', '3600', '(3600 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                                        +car(
+                                            'gazel-long.png', 'Газель фермер', '3600', '(3600 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                                        +car(
+                                            'gazel-euro.png', 'Газель европлатформа', '3000', '(3000 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                        // .b-calc__group
+
+                        .b-calc__group.row.row--xs-center
+                            .col.col--sm-6.col--md-3
+                                .b-calc-name Укажите время:
+                            .col.col--sm-6.col--md-4.col--lg-3
+                                select.b-calc-select(name="time")
+                                    option(value="4" selected, data-calc="0") 4 часа
+                                    option(value="5", data-calc="600") 5 часов
+                                    option(value="6", data-calc="1200") 6 часов
+                                    option(value="7", data-calc="1800") 7 часов
+                                    option(value="8", data-calc="2400") 8 часов
+                            .col.col--md-5.col--lg-6
+                                .b-calc__note Минимальное время заказа машины - 4 часа
+                        // .b-calc__group
+                    // .b-calc__section
+
+                    .b-calc__section
+
+                        .b-calc__group.row
+                            .col.col--lg-3
+                                .b-calc-name Пункт назначения:
+                            .col.col--lg-1.col--sm-2.text--xs-center
+                                span.b-calc-input-label откуда
+                            .col.col--lg-8.col--sm-10
+                                label.b-calc-input.b-calc-input--indent
+                                    +svg('close').icon.icon-close.clear-input
+                                    input.b-calc-input__input.calc-departure(type="text" name="departure" placeholder="Москва или город МО" value="Россия, Москва")
+                                    .b-calc-input__error.error
+                            .col.col--lg-1.col--lg-offset-3.col--sm-2.text--xs-center
+                                span.b-calc-input-label куда
+                            .col.col--lg-8.col--sm-10
+                                label.b-calc-input.b-calc-input--indent
+                                    +svg('close').icon.icon-close.clear-input
+                                    input.b-calc-input__input.calc-destination(type="text", name="destination", placeholder="Введите город МО")
+                                    .b-calc-input__error.error
+                        // .b-calc__group
+
+                        .b-calc__group.row.row--sm-center
+                            .col.col--lg-2.col--md-2.col--sm-3.col--xs-12
+                                .b-calc-name Расстояние
+                            .col.col--lg-3.col--md-3.col--sm-3.col--xs-12
+                                label.b-calc-input
+                                    span.b-calc-input__label.calc-lenght 0
+                            .col.col--lg-7.col--md-6.col--md-offset-0.col--sm-9.col--sm-offset-3
+                                .b-calc__note Из Москвы: от МКАД до точки назначения
+                        // .b-calc__group
+
+                    // .b-calc__section
+
+                    .b-calc__section
+
+                        .b-calc__group.row
+                            .col.col--lg-3.col--sm-7
+                                .b-calc-name Грузчики
+                                    span.b-calc-name__note (на стоимость не влияет отсутствие грузовых лифтов):
+                            .col.col--lg-3.col--sm-5
+                                label.b-calc-radio
+                                    input.b-calc-radio__input(type="radio", name="person", value="1", data-calc="1")
+                                    span.b-calc-radio__label Да
+                                label.b-calc-radio
+                                    input.b-calc-radio__input(type="radio", name="person", value="0", checked, data-calc="0")
+                                    span.b-calc-radio__label Нет
+                            .col.col--lg-6.calc-person
+                                .row
+                                    .col.col--lg-6.col--sm-7
+                                        .b-calc-name Количество грузчиков:
+                                    .col.col--lg-6.col--sm-5
+                                        select.b-calc-select(name="person-items")
+                                            option(value="1", selected, data-calc="350") 1 человек
+                                            option(value="2", data-calc="700") 2 человека
+                                            option(value="3", data-calc="1050") 3 человека
+                                            option(value="4", data-calc="1400") 4 человека
+                                            option(value="5", data-calc="1750") 5 человек
+                        // .b-calc__group
+                    // .b-calc__section
+
+                    .b-calc__footer
+                        //- p Цена за 1 машину: 700 #[span.cur &#8381;]
+                        p #[strong Предварительная сумма заказа]: #[span.b-calc__total #[span.calc-total 0] #[span.cur &#8381;] *] #[span.b-calc__control.button.button--base.calc-control(data-calc-total="0") Расчитать]
+
+                        .row.row--xs-center
+                            .col.col--lg-3.col--md-5.col--sm-5
+                                a.b-calc__button.button.button--round.button--white.calc-button(href="javascript:;", data-calc="calc-obl") Оформить заказ
+                    // .b-calc__footer
+                // .b-calc-form
+
+                form.b-calc-form#calc-russia(action="javascript:;", data-tab="calc-russia", data-calc)
+                    input(type="hidden", name="length-price", value="34")
+                    input(type="hidden", name="km", value="0")
+                    .b-calc__section
+                        .b-calc__group.row
+                            .col.col--sm-3
+                                .b-calc-name Выберите автомобиль:
+                            .col.col--xl-9.col--lg-9
+                                .calc-slider
+                                    .calc-slider__body
+                                        +car(
+                                            'gazel.png', 'Газель обычная', '3000', '(3000 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                                        +car(
+                                            'gazel4m.png', 'Газель удлиненная 4м', '3600', '(3600 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                                        +car(
+                                            'gazel5m.png', 'Газель удлиненная 5м', '3600', '(3600 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                                        +car(
+                                            'gazel-long.png', 'Газель фермер', '3600', '(3600 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                                        +car(
+                                            'gazel-euro.png', 'Газель европлатформа', '3000', '(3000 руб. - 4 часа. Далее 600 руб /час)'
+                                        )
+                        // .b-calc__group
+
+                    // .b-calc__section
+
+                    .b-calc__section
+
+                        .b-calc__group.row
+                            .col.col--lg-3
+                                .b-calc-name Пункт назначения:
+                            .col.col--lg-1.col--sm-2.text--xs-center
+                                span.b-calc-input-label откуда
+                            .col.col--lg-8.col--sm-10
+                                label.b-calc-input.b-calc-input--indent
+                                    +svg('close').icon.icon-close.clear-input
+                                    input.b-calc-input__input.calc-departure(type="text" name="departure" placeholder="Москва или город России" value="")
+                                    .b-calc-input__error.error
+                            .col.col--lg-1.col--lg-offset-3.col--sm-2.text--xs-center
+                                span.b-calc-input-label куда
+                            .col.col--lg-8.col--sm-10
+                                label.b-calc-input.b-calc-input--indent
+                                    +svg('close').icon.icon-close.clear-input
+                                    input.b-calc-input__input.calc-destination(type="text", name="destination", placeholder="Введите город")
+                                    .b-calc-input__error.error
+                        // .b-calc__group
+
+                        .b-calc__group.row.row--sm-center
+                            .col.col--lg-2.col--md-2.col--sm-3.col--xs-12
+                                .b-calc-name Расстояние
+                            .col.col--lg-3.col--md-3.col--sm-3.col--xs-12
+                                label.b-calc-input
+                                    span.b-calc-input__label.calc-lenght 0
+                            .col.col--lg-7.col--md-6.col--md-offset-0.col--sm-9.col--sm-offset-3
+                                .b-calc__note Из Москвы: от МКАД до города
+                        // .b-calc__group
+
+                    // .b-calc__section
+
+                    .b-calc__section
+
+                        .b-calc__group.row
+                            .col.col--lg-3.col--sm-7
+                                .b-calc-name Грузчики
+                                    span.b-calc-name__note (на стоимость не влияет отсутствие грузовых лифтов):
+                            .col.col--lg-3.col--sm-5
+                                label.b-calc-radio
+                                    input.b-calc-radio__input(type="radio", name="person", value="1", data-calc="1")
+                                    span.b-calc-radio__label Да
+                                label.b-calc-radio
+                                    input.b-calc-radio__input(type="radio", name="person", value="0", checked, data-calc="0")
+                                    span.b-calc-radio__label Нет
+                            .col.col--lg-6.calc-person
+                                .row
+                                    .col.col--lg-6.col--sm-7
+                                        .b-calc-name Количество грузчиков:
+                                    .col.col--lg-6.col--sm-5
+                                        select.b-calc-select(name="person-items")
+                                            option(value="1", selected, data-calc="350") 1 человек
+                                            option(value="2", data-calc="700") 2 человека
+                                            option(value="3", data-calc="1050") 3 человека
+                                            option(value="4", data-calc="1400") 4 человека
+                                            option(value="5", data-calc="1750") 5 человек
+                        // .b-calc__group
+                    // .b-calc__section
+
+                    .b-calc__footer
+                        //- p Цена за 1 машину: 700 #[span.cur &#8381;]
+                        p #[strong Предварительная сумма заказа]: #[span.b-calc__total #[span.calc-total 0] #[span.cur &#8381;] *] #[span.b-calc__control.button.button--base.calc-control(data-calc-total="0") Расчитать]
+
+                        .row.row--xs-center
+                            .col.col--lg-3.col--md-5.col--sm-5
+                                a.b-calc__button.button.button--round.button--white.calc-button(href="javascript:;", data-calc="calc-russia") Оформить заказ
+                            .col.col--lg-9.col--md-7.col--sm-7
+                                .b-calc__note * - Стоимость срочной доставки отдельным автомобилем
+                                .b-calc__note * - Стоимость перевозки сборного груза и придворительное бронирование автомобиля уточняйте у оператора
+                    // .b-calc__footer
+                // .b-calc-form
+
+            // .b-calc
+        // .s-calc__body
+    // .grid
+    .map#map
+// .SECTION-CALC

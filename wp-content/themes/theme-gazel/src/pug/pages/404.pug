@@ -1,0 +1,33 @@
+extends ../layout/_layout
+
+block variables
+    - var title = '404'
+
+block header
+    include ../layout/_header
+
+block content
+    section.s-error
+        .grid.grid--container
+
+            .b-crumbs
+                span: a(href="#") Главная
+                span.separator |
+                span Автопарк
+            // .b-crumbs
+
+            h1.s-error__title 404
+            .text-content
+                p: strong Страница на которую вы пытались перейти не существует
+                p Возможно один из этих разделов вам подойдет?
+                ul
+                    li: a(href="#") Страница
+                    li: a(href="#") Страница
+                    li: a(href="#") Страница
+                    li: a(href="#") Страница
+                    li: a(href="#") Страница
+        // .grid
+    // .SECTION-404
+
+block footer
+    include ../layout/_footer

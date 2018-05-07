@@ -1,0 +1,90 @@
+/*-----------------------------------------------------------------------------
+ *  SECTION: clients
+ * ------------------------------------------------------------------------- */
+.s-clients
+    position relative
+
+    &__decor
+        position absolute
+        top 0
+        left 50%
+        transform translateX(-50%)
+        @media md
+            height: 45px
+
+    &__top
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+        background-image url(base-img-path+'clients.jpg')
+        padding 125px 0 170px
+        color #fff
+        text-align center
+        @media md
+            padding: 50px 0 120px
+
+        .b-title
+            color #fff
+
+    &__bottom
+        background-color #f5f5f5
+        background-repeat no-repeat
+        background-position left center
+        background-image url(base-img-path+'clients-map.png')
+
+.b-clients
+    margin-top -95px
+    padding-bottom 90px
+    display flex
+    flex-wrap wrap
+    justify-content center
+    @media sm
+        padding-bottom 2rem
+
+    &__row
+        display flex
+        flex-wrap wrap
+        justify-content flex-end
+
+    &__item
+        width: (100%/10)
+        text-align center
+        margin-right: 0
+        margin-bottom: -35px
+        position relative
+        z-index 1
+        @media lg
+            width (100%/8)
+        @media md
+            width (100%/6)
+        @media sm
+            width (100%/4)
+
+        &:nth-child(even)
+            margin-top 50px
+            @media xs
+                margin-top 35px
+
+        &:first-child
+        &:nth-child(3)
+        &:nth-child(5)
+        &:nth-child(7)
+        &:nth-child(9)
+            transform scale(1.1)
+            @media xs
+                transform none
+
+.client
+    display inline-block
+    width 120px
+    height 104px
+    background-color #fff
+    position relative
+    z-index 1
+    background-size 75% auto
+    @media sm
+        background-size 50% auto
+    @media xs
+        background-size 75% auto
+        width 80px
+        height 60px

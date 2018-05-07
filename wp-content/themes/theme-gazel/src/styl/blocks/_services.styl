@@ -1,0 +1,262 @@
+/*-----------------------------------------------------------------------------
+ *  SECTION: services
+ * ------------------------------------------------------------------------- */
+.s-service
+    background-color #eaeaea
+    padding 50px 0 10px
+    position relative
+    @media md
+        padding-top 30px
+
+    &__part
+        border-top 1px solid #95c9af
+        border-bottom 1px solid #95c9af
+        margin-bottom 6px
+        padding 45px 0
+        position relative
+        background-repeat no-repeat
+        @media md
+            padding 30px 0 15px
+        &:first-child
+            border-top 0
+            padding-top 0
+            @media xs
+                padding-bottom 0
+
+        &:last-child
+            border-bottom 0
+            background-position center right
+            background-image url(base-img-path+'s-services-bg-map.png')
+
+        & > .grid
+            position relative
+
+    &__decor
+        height 67px
+        position absolute
+        top -90px
+        left 40px
+        z-index 1
+        @media xl
+            height: 50px
+            top: -70px
+        @media lg
+            top -60px
+        @media sm
+            display none
+
+    &__promo
+        background-repeat no-repeat
+        background-position top left
+        background-size cover
+        background-image url(base-img-path+'service-promo.jpg')
+        font-size rem-calc(36px)
+        color #fff
+        text-align center
+        font-weight 700
+        text-shadow 0 4px 4px rgba(0, 0, 0, 0.29)
+        padding 20px 15px
+        margin-bottom 6px
+        @media md
+            font-size 1.2rem
+
+
+.prime-services
+    display flex
+    flex-wrap wrap
+    justify-content center
+
+    &__item
+        text-align center
+        width 32%
+        @media sm
+            width 50%
+            margin-bottom 30px
+            display flex
+            flex-direction column
+
+        &:first-child
+        &:last-child
+            width 100%
+            @media sm
+                width 50%
+            .b-service__img
+                background-position center
+            .b-service__title
+                text-align center
+
+        &:nth-child(2)
+            text-align right
+            @media sm
+                text-align center
+        &:nth-child(4)
+            text-align left
+            @media sm
+                text-align center
+
+    &__spacer
+        flex-grow 1
+        height 320px
+        margin 0 20px
+        background-repeat no-repeat
+        background-position center
+        background-size contain
+        background-image url(base-img-path+'prime-service-decor.png')
+        @media sm
+            display none
+
+
+.b-service
+    display inline-block
+    text-align left
+    @media sm
+        text-align center
+    @media xs
+        padding 0 5px
+        display flex
+        flex-direction column
+        justify-content space-between
+        text-align center
+
+    &__img
+        background-repeat no-repeat
+        background-position left
+        background-size contain
+        height 90px
+        margin-bottom 25px
+        @media sm
+            background-position center
+        @media xs
+            height 50px
+
+    &__title
+        font-size rem-calc(23px)
+        line-height 1.2
+        font-weight 700
+        text-transform uppercase
+        color color-two
+        transition all 0.2s linear
+        min-width 265px
+        @media sm
+            font-size 1rem
+            min-width auto
+
+    &:hover &__title
+        color color-base
+        text-shadow: 0 0 7px rgba(123, 89, 176, 0.3);
+
+
+.service-cards
+    margin: 0 -15px
+    @media sm
+        margin: 0
+    .col
+        padding: 30px 15px 10px
+        @media sm
+            padding-left 5px
+            padding-right 5px
+
+.service-card
+    width 100%
+    height 100%
+    text-align center
+    position relative
+    transition all 0.2s linear
+    background-color #fff
+    display flex
+    flex-direction column
+    justify-content space-between
+    &:before
+        content ''
+        display block
+        width: 84%
+        border-color transparent transparent color-two transparent
+        border-style solid
+        border-width 0 10px 10px
+        position absolute
+        top -10px
+        left 50%
+        transform translateX(-50%)
+
+    & > a
+        display block
+
+    &:hover
+        box-shadow 0 11px 32px 0 rgba(#000, 0.15)
+        .service-card__img
+            border-bottom-color #6d7c99
+        .service-card__link
+            box-shadow 0 0 9px 0 rgba(#6660a7, 0.63)
+
+    &__img
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+        height 235px
+        border-bottom 3px solid transparent
+        transition all 0.2s linear
+        position relative
+        @media xs
+            height 150px
+
+    &__body
+        background-color #fff
+        padding 60px 2rem 0
+
+    &__footer
+        padding-bottom 45px
+        @media md
+            padding-bottom 15px
+
+    &__price
+        width 94px
+        height 82px
+        font-family font-heuristica
+        font-size rem-calc(12px)
+        font-weight 700
+        color #fff
+        background-color color-two
+        position absolute
+        left 50%
+        bottom -((82/2)+2)px
+        margin-left -(94px/2)
+        z-index 0
+
+        .hexagon__two
+            display flex
+            flex-direction column
+            justify-content center
+
+        strong
+            display block
+            padding-top 3px
+            font-size rem-calc(30px)
+
+    &__name
+        text-transform uppercase
+        color color-two
+        font-size rem-calc(24px)
+        font-weight 700
+        line-height 1.1
+        margin-bottom 22px
+        @media md
+            font-size 1.2em
+            margin-bottom 15px
+
+    &__link
+        font-size rem-calc(14px)
+        padding 11px 30px 8px
+        &:hover
+            background-color #583f90
+
+
+    &--thin
+        & ^[0]__img
+            height 170px
+
+        & ^[0]__body
+            padding 1rem 1rem 0
+
+        & ^[0]__name
+            @media lg
+                font-size 1.2rem

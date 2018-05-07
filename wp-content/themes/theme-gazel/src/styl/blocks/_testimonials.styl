@@ -1,0 +1,79 @@
+/*-----------------------------------------------------------------------------
+ *  SECTION: testimonials
+ * ------------------------------------------------------------------------- */
+.s-testimonials
+    padding: 18px 0 110px
+    @media md
+        padding-bottom 30px
+
+    .b-title
+        margin-bottom 70px
+        @media md
+            margin-bottom 30px
+
+    &__body
+        position relative
+
+    &__decor
+        position absolute
+        top -33%
+        right 34.3%
+        z-index 0
+        @media lg
+            top -30%
+            right 31%
+        @media md
+            top -35%
+            right 24%
+        @media sm
+            display none
+
+.testimonial
+
+    &__text
+        line-height rem-calc(30px)
+
+    &__person
+        display inline-block
+        width 96%
+        background-repeat no-repeat
+        background-position left bottom
+        background-size auto 100%
+        background-image url(base-img-path+'testimonial-quote.png')
+        padding 55px 50px 100px
+        @media md
+            background-image none
+            padding 0
+
+    &__name
+        text-align left
+        font-size rem-calc(24px)
+        color #524c8b
+        margin-bottom 20px
+
+    &__position
+        text-align left
+        color #5a5a5a
+        line-height rem-calc(24px)
+
+    &__pic
+        display inline-block
+        margin-top 20px
+        width 140px
+        max-width 100%
+        height 122px
+        background-color #ccc
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+
+.testimonials-slider
+    .tns-outer
+        position relative
+        padding-bottom 60px !important
+
+    .tns-nav
+        position absolute
+        width 100%
+        bottom 0
+        left 0

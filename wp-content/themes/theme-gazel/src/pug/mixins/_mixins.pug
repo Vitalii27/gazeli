@@ -1,0 +1,10 @@
+- var IMG_PATH = 'assets/img/';
+
+//- SVG
+mixin svg( iconName )
+  svg(class= attributes.class): use(xlink:href= IMG_PATH + 'sprite.svg#' + iconName)
+
+//- Menu Item
+mixin menuitem(text, link)
+    li(class!=attributes.class)
+        a(class!=attributes.class + '_link' href=link)=text

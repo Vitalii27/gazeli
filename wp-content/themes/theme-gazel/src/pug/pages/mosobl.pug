@@ -1,0 +1,204 @@
+extends ../layout/_layout
+
+block variables
+    - var title = 'По Области'
+
+block header
+    include ../layout/_header
+
+block content
+    .page-hero.page-hero--padding(style="background-image:url("+IMG_PATH+"hero/hero-mosobl.jpg);")
+        .grid.grid--container
+
+            .text--xs-center
+                .b-title.b-title--big Грузоперевозки по Московской области
+                .b-hero-title
+                    span.b-hero-title__top Гарантия страховки
+                    span.b-hero-title__bottom перевозимого груза #[strong 1.5 млн]
+
+            .row
+                .col.col--lg-8.col--lg-offset-2
+
+                    .workpath
+                        .row
+                            .col.col--md-4.col--sm-4.col--xs-6
+                                .workpath__item
+                                    +svg('timer').icon.icon-timer.workpath__icon
+                                    .workpath__title Перевозка
+                                    p Без посредников
+                            // .col
+
+                            .col.col--md-4.col--sm-4.col--xs-6
+                                .workpath__item
+                                    +svg('car').icon.icon-car.workpath__icon
+                                    .workpath__title Более 10 лет
+                                    p на рынке грузоперевозок
+                            // .col
+
+                            .col.col--md-4.col--sm-4.col--xs-12
+                                .workpath__item
+                                    +svg('calendar').icon.icon-calendar.workpath__icon
+                                    .workpath__title Мы работаем
+                                    p без выходных
+                            // .col
+
+                        // .row
+                    // .workpath
+
+            .row
+                .col.col--sm-12.text--xs-center
+                    a.button.button--round.button--white(href="#callback" data-modal-open) Заказать газель
+            // .row
+
+        // .grid
+    // .page-hero(style="background-image:url("+IMG_PATH+"hero/2.jpg);")
+
+    section.section
+        .grid.grid--container
+            .text-content
+                .text-columns
+                    h4 Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов.
+                    p Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
+                    p Самым известным «рыбным» текстом является знаменитый Lorem ipsum. Считается, что впервые его применили в книгопечатании еще в XVI веке. Своим появлением Lorem ipsum обязан древнеримскому философу Цицерону, ведь именно из его трактата «О пределах добра и зла» средневековый книгопечатник вырвал отдельные фразы и слова, получив текст-«рыбу», широко используемый и по сей день. Конечно, возникают некоторые вопросы, связанные с использованием Lorem ipsum на сайтах и проектах, ориентированных на кириллический контент – написание символов на латыни и на кириллице значительно различается.
+                    p И даже с языками, использующими латинский алфавит, могут возникнуть небольшие проблемы: в различных языках те или иные буквы встречаются с разной частотой, имеется разница в длине наиболее распространенных слов. Отсюда напрашивается вывод, что все же лучше использовать в качестве «рыбы» текст на том языке, который планируется использовать при запуске проекта. Сегодня существует несколько вариантов Lorem ipsum, кроме того, есть специальные генераторы, создающие собственные варианты текста на основе оригинального трактата, благодаря чему появляется возможность получить более длинный неповторяющийся набор слов.
+                // .text-columns
+            // .text-content
+        // .grid
+    // .SECTION-TEXT
+
+    include ../blocks/_calc
+
+    section.s-advantage
+        .grid.grid--container
+            .advantages
+                .advantages__title Преимущества работы с нами:
+
+                .advantages__row.row
+
+                    .advantages__item.col.col--md-4
+                        .advantages__img.hexagon(style="background-image:url("+IMG_PATH+"advantage/strahovka.jpg);")
+                                .hexagon__one: .hexagon__two
+                        .advantages__name Весь товар застрахован#[br]на сумму до 1 500 000 #[span.cur &#8381;]
+                        .advantages__desc
+                            .text-content
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                    // .advantages__item
+
+                    .advantages__item.col.col--md-4
+                        .advantages__img.hexagon(style="background-image:url("+IMG_PATH+"advantage/price.jpg);")
+                                .hexagon__one: .hexagon__two
+                        .advantages__name Низкие цены#[br]от 750 #[span.cur &#8381;]
+                        .advantages__desc
+                            .text-content
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                    // .advantages__item
+
+                    .advantages__item.col.col--md-4
+                        .advantages__img.hexagon(style="background-image:url("+IMG_PATH+"advantage/upakovka.jpg);")
+                                .hexagon__one: .hexagon__two
+                        .advantages__name Упаковка#[br]в подарок
+                        .advantages__desc
+                            .text-content
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                    // .advantages__item
+
+                // .advantages__row
+            // .advantages
+        // .grid
+    // .SECTION-ADVANTAGE
+
+    section.s-clients
+        .lines-circle.s-clients__decor
+
+        .s-clients__top
+            .grid.grid--container
+                .row
+                    .col.col--md-6.col--md-offset-3
+                        .b-title Свой груз нам уже доверили
+                        p.b-title-sub Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non facere quibusdam blanditiis unde fugiat nemo porro delectus distinctio adipisci illo?
+                    // .col
+                // .row
+            // .grid
+        // .s-clients__top
+
+        .s-clients__bottom
+            .grid.grid--container
+                .row
+                    .col.col--md-12
+                        .b-clients
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+                            .b-clients__item
+                                .client.hexagon(style="background-image:url("+IMG_PATH+"clients/1.jpg);")
+                                    .hexagon__one: .hexagon__two
+            // .grid
+
+            include ../blocks/_promo
+
+        // .s-clients__bottom
+
+    // .SECTION-CLIENTS
+
+block footer
+    include ../layout/_footer

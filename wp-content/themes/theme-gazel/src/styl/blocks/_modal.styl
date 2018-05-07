@@ -1,0 +1,42 @@
+/*-----------------------------------------------------------------------------
+ *  SECTION: modal
+ * ------------------------------------------------------------------------- */
+.b-modal
+    background-color #fff
+    padding 30px 30px 20px
+    min-width 300px
+    border-radius 6px
+    @media sm
+        width 280px
+        padding 30px 15px 5px
+
+    &--wide
+        width 95%
+
+    &__title
+        text-transform uppercase
+        font-size rem-calc(22px)
+        color color-base
+        margin-bottom 30px
+
+    .b-form
+        &__control
+            border 1px solid #e5e5e5
+            height 46px
+            border-radius 50px
+            padding 0 15px
+
+            &.textarea
+                border-radius: 25px
+                padding: 15px
+                min-height: 120px
+
+        .button
+            width 100%
+
+        .checkbox
+            &__label
+                .icon
+                    fill color-main
+                &:before
+                    border-color color-main

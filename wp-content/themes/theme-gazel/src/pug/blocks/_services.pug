@@ -1,0 +1,99 @@
+section.s-service#services
+
+    .s-service__part
+        .grid.grid--container
+            .b-title Наши услуги
+
+            .prime-services.row.row--sm-center
+                .prime-services__item
+                    a.b-service(href="moscow.html")
+                        .b-service__img(style="background-image:url("+IMG_PATH+"park/gazel.png);")
+                        .b-service__title Грузоперевозки#[br]по Москве
+                    // .b-service
+                // .prime-services__item
+                .prime-services__item
+                    a.b-service(href="russia.html")
+                        .b-service__img(style="background-image:url("+IMG_PATH+"park/gazel-fermer.png);")
+                        .b-service__title Грузоперевозки#[br]по России
+                    // .b-service
+                // .prime-services__item
+                .prime-services__spacer
+                .prime-services__item
+                    a.b-service(href="mosobl.html")
+                        .b-service__img(style="background-image:url("+IMG_PATH+"park/gazel-5m.png);")
+                        .b-service__title Грузоперевозки#[br]по Московской области
+                    // .b-service
+                // .prime-services__item
+                .prime-services__item
+                    a.b-service(href="#")
+                        .b-service__img(style="background-image:url("+IMG_PATH+"park/gazel-4m.png);")
+                        .b-service__title Срочная доставка
+                    // .b-service
+                //.prime-services__item
+            // .prime-services
+        // .grid
+    // .s-service__part
+
+    .s-service__part
+        .grid.grid--container
+            .b-title Переезды
+
+            .service-cards.row
+                include ../blocks/_service
+                +service(
+                    {
+                        img: 'kvartira.jpg',
+                        title: 'Квартирный переезд',
+                        link: '#',
+                        icon: 'icon-service-kvartira.png'
+                    },
+                    {
+                        img: 'dacha.jpg',
+                        title: 'Дачный переезд',
+                        link: '#',
+                        icon: 'icon-service-dacha.png'
+                    },
+                    {
+                        img: 'office.jpg',
+                        title: 'Офисный переезд',
+                        link: '#',
+                        icon: 'icon-service-office.png'
+                    }
+                )
+
+        // .grid
+    // .s-service__part
+
+    .s-service__promo Выезд оценщика переезда - бесплатно!
+
+    .s-service__part
+        .grid.grid--container
+            .b-title Погрузочно-разгрузочные работы
+
+            .service-cards.row
+                include ../blocks/_service
+                +service(
+                    {
+                        img: 'gruzchiki.jpg',
+                        title: 'Грузчики',
+                        link: '#',
+                        icon: 'icon-service-person.png'
+                    },
+                    {
+                        img: 'mebel.jpg',
+                        title: 'Монтаж - демонтаж мебели и упаковка',
+                        link: '#',
+                        icon: 'icon-service-montaz.png'
+                    },
+                    {
+                        img: 'dostavka.jpg',
+                        title: 'Такелажные работы',
+                        link: '#',
+                        icon: 'icon-service-takelaz.png'
+                    }
+                )
+
+        // .grid
+    // .s-service__part
+
+// .SECTION-SERVICE

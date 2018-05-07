@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: https://perevozki-na-gazeli.com/sitemap_index.xml
+
+Host: https://perevozki-na-gazeli.com

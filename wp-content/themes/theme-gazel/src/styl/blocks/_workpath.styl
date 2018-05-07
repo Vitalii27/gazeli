@@ -1,0 +1,79 @@
+/*-----------------------------------------------------------------------------
+ *  SECTION: workpath
+ * ------------------------------------------------------------------------- */
+.s-workpath
+    background-repeat no-repeat
+    background-position center
+    background-size cover
+    color #fff
+
+    &__body
+        padding 95px 0 90px
+        position relative
+
+        &:after
+            content ''
+            display block
+            width 335px
+            height 270px
+            background-repeat no-repeat
+            background-position center
+            background-size contain
+            background-image url(base-img-path+'workpath-cars.png')
+            position absolute
+            left -(335/2)px
+            bottom -(270/2)px
+            z-index 2
+            @media xl
+                left 0
+            @media md
+                display none
+        @media sm
+            padding 30px 0
+
+    .b-title
+        color #fff
+        margin-bottom 23px
+
+    .b-title-sub
+        font-size rem-calc(14px)
+        line-height rem-calc(24px)
+
+    .button
+        box-shadow 0 0 18px rgba(210, 255, 0, 0.36)
+        font-size rem-calc(18px)
+
+.workpath
+    padding 35px 0 55px
+    @media sm
+        padding 15px 0
+
+    &__item
+        text-align center
+        position relative
+        @media sm
+            margin-bottom 20px
+
+    &__arrow
+        position absolute
+        top 5px
+        right -(81/2)px
+        @media sm
+            display none
+
+    &__icon
+        width 68px
+        height 50px
+        fill #fff
+        margin-bottom 22px
+        @media sm
+            height 30px
+
+    &__title
+        font-size rem-calc(18px)
+        text-transform uppercase
+        margin-bottom 12px
+        font-weight 700
+
+    p
+        line-height 1.2

@@ -1,0 +1,126 @@
+extends ../layout/_layout
+
+block variables
+    - var title = 'О нас'
+
+block header
+    include ../layout/_header
+
+block content
+    .page-hero(style="background-image:url("+IMG_PATH+"hero/about.jpg);")
+        .grid.grid--container
+
+            .b-crumbs
+                span: a(href="#") Главная
+                span.separator |
+                span О нас
+            // .b-crumbs
+
+            h1.page-title О нас
+        // .grid
+    // .page-hero
+
+    section.section.section-colored
+        .grid.grid--container
+            .text-content
+                h4 Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов.
+                p Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества восприятия макета.
+                p Самым известным «рыбным» текстом является знаменитый Lorem ipsum. Считается, что впервые его применили в книгопечатании еще в XVI веке. Своим появлением Lorem ipsum обязан древнеримскому философу Цицерону, ведь именно из его трактата «О пределах добра и зла» средневековый книгопечатник вырвал отдельные фразы и слова, получив текст-«рыбу», широко используемый и по сей день. Конечно, возникают некоторые вопросы, связанные с использованием Lorem ipsum на сайтах и проектах, ориентированных на кириллический контент – написание символов на латыни и на кириллице значительно различается.
+                ul
+                    li Один
+                    li Два
+                p И даже с языками, использующими латинский алфавит, могут возникнуть небольшие проблемы: в различных языках те или иные буквы встречаются с разной частотой, имеется разница в длине наиболее распространенных слов. Отсюда напрашивается вывод, что все же лучше использовать в качестве «рыбы» текст на том языке, который планируется использовать при запуске проекта. Сегодня существует несколько вариантов Lorem ipsum, кроме того, есть специальные генераторы, создающие собственные варианты текста на основе оригинального трактата, благодаря чему появляется возможность получить более длинный неповторяющийся набор слов.
+            // .text-content
+        // .grid
+    // .SECTION-TEXT
+
+    section.section
+        .grid.grid--container
+
+            .s-about__item
+                .s-about__content
+
+                    .text-header-img
+                        .text-header-img__pic
+                            img(src=IMG_PATH+'text-img.jpg', alt="img")
+                        .text-header-img__title Lorem ipsum dolor sit amet  consectetuer adipising edit sed eiusmod tempor
+
+                    .text-content
+                        .text-columns
+                            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias ab libero, corporis autem iure laborum!
+                            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil eos sint, porro perspiciatis harum officia?
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis assumenda, iusto animi voluptate incidunt fuga!
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, modi. Veniam reiciendis numquam molestias eaque.
+                        // .text-columns
+                    // .text-content
+
+                    .b-advantage-grid
+                        .b-advantage-grid__title.text--xs-center.text--md-left С нами Вы доставите груз:
+                        .b-advantage-grid__row
+                            .b-advantage-grid__item
+                                +svg('medal').icon.icon-medal.b-advantage-grid__icon
+                                .b-advantage-grid__text Вовремя
+                            .b-advantage-grid__item
+                                +svg('hand').icon.icon-hand.b-advantage-grid__icon
+                                .b-advantage-grid__text Дешевле
+                            .b-advantage-grid__item
+                                +svg('compas').icon.icon-compas.b-advantage-grid__icon
+                                .b-advantage-grid__text В любое место
+                            .b-advantage-grid__item
+                                +svg('prize').icon.icon-prize.b-advantage-grid__icon
+                                .b-advantage-grid__text С гарантией
+                    // .b-advantage-grid
+
+            .s-about__item.row
+                .col.col--xs-12
+                    .s-about__content
+                        .text-content
+                            p Основным видом деятельности нашей компании являются грузоперевозки малотоннажными грузовыми автомобилями по Москве, Московской области и России. На данный момент в автопарке нашей компании насчитывается несколько десятков машин. Основным видом деятельности нашей компании являются грузоперевозки малотоннажными грузовыми автомобилями по Москве, Московской области и России. На данный момент в автопарке нашей компании насчитывается несколько десятков машин.
+                            img.alignright(src=IMG_PATH+'directions.png', width="320" alt="img")
+                            h4 Компания «ГАЗЕЛЬ 15» была основана в 2005 году, когда была приобретена наша первая грузовая автомашина.
+                            p Основным видом деятельности нашей компании являются грузоперевозки малотоннажными грузовыми автомобилями по Москве, Московской области и России. На данный момент в автопарке нашей компании насчитывается несколько десятков машин. Основным видом деятельности нашей компании являются грузоперевозки малотоннажными грузовыми автомобилями по Москве, Московской области и России. На данный момент в автопарке нашей компании насчитывается несколько десятков машин.
+                // .col
+                            //- .col.col--lg-3.col--md-5
+                            //-     .b-fact-green
+                            //-         span.b-fact-green__text более
+                            //-         span.b-fact-green__num 3000
+                            //-         span.b-fact-green__text направлений первозок
+                            //-     // .b-fact-green
+                            //- // .col
+            // .s-about__item
+
+            .s-about__item.row
+                //- .col.col--lg-4.col--md-5
+                //-     .b-fact-blue
+                //-         .b-fact-blue__title
+                //-             span.b-fact-blue__num 12
+                //-             span.b-fact-blue__num-sub млн руб
+                //-             span.b-fact-blue__num-desc максимальная ценость перевозимого груза
+                //-         .b-fact-blue__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur magni placeat vel deleniti rem sapiente provident quibusdam fuga nihil inventore!
+                //-     // .b-fact-blue
+                //- // .col
+
+                .col.col--xs-12
+                    .s-about__content
+                        .text-content
+                            img.alignleft(src=IMG_PATH+'garanty.png', width="363", alt="img")
+                            p В 2008 году для удобства наших клиентов был создан этот сайт, который значительно сокращает время от момента, когда заказчик только ищет автомобиль, до момента осуществления перевозки.
+                            p В разное время нашими заказчиками являлись крупные российские и зарубежные компании, такие как Техносан, киноконцерн “Мосфильм”, Связной, Лореаль, Пони Экспресс, Юст Групп. Многие из них и по сей день пользуются нашими услугами.
+                            p Мы стараемся максимально подстроиться под потребности наших заказчиков. Для этого наша компания оказывает не только весь спектр сопутствующих грузоперевозкам услуг, но и в соответствии с пожеланиями клиента и спецификой его груза предоставляет нужный ему транспорт. Для улучшения качества наших перевозок все автомобили оснащены спутниковыми системами слежения.
+                    // .s-about__content
+                // .col
+            // .s-about__item
+
+        // .grid
+    // .SECTION-ABOUT
+
+    include ../blocks/_workpath
+
+    include ../blocks/_promo
+
+    section.s-map
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        #b-map.b-map(data-center="55.59989342,37.54102187", data-mark="55.59989342,37.54102187")
+
+block footer
+    include ../layout/_footer

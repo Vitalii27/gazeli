@@ -1,0 +1,60 @@
+section.s-workpath(style="background-image:url("+IMG_PATH+"workpath.jpg);")
+
+    .grid.grid--container
+        .s-workpath__body
+            .row
+                .col.col--md-6.col--md-offset-3.text--xs-center
+                    .b-title Как мы работаем
+                    p.b-title-sub Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id asperiores quas excepturi, quaerat maiores tenetur?
+            // .row
+
+            .row
+                .col.col--lg-10.col--lg-offset-1
+
+                    .workpath
+                        .row
+                            .col.col--md-3.col--sm-6
+                                .workpath__item
+                                    +svg('request').icon.icon-request.workpath__icon
+                                    .workpath__title Оставляете заявку
+                                    p Мы связываемся с Вами и расчитываем стоимость
+                                    +svg('circle-arrow').icon.icon-circlearrow.workpath__arrow
+                            // .col
+
+                            .col.col--md-3.col--sm-6
+                                .workpath__item
+                                    +svg('contract').icon.icon-contract.workpath__icon
+                                    .workpath__title Согласовываем цену
+                                    p Заключаем договор
+                                    +svg('circle-arrow').icon.icon-circlearrow.workpath__arrow
+                            // .col
+
+                            .col.col--md-3.col--sm-6
+                                .workpath__item
+                                    +svg('car-work').icon.icon-carwork.workpath__icon
+                                    .workpath__title Подаем машину
+                                    p Перевозим Ваш груз в назначенное время и место
+                                    +svg('circle-arrow').icon.icon-circlearrow.workpath__arrow
+                            // .col
+
+                            .col.col--md-3.col--sm-6
+                                .workpath__item
+                                    +svg('money').icon.icon-money.workpath__icon
+                                    .workpath__title Получаем оплату
+                                    p И отзыв о работе
+                            // .col
+
+                        // .row
+                    // .workpath
+
+                // .col
+            // .row
+
+            .row
+                .col.col--sm-12.text--xs-center
+                    a.button.button--round.button--white(href="#callback" data-modal-open) Заказать газель
+            // .row
+        // .s-workpath__body
+    // .grid
+
+// .SECTION-WORKPATH

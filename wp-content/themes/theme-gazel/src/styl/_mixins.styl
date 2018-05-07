@@ -1,0 +1,23 @@
+rem-calc(value)
+  u = unit(value);
+  if (u is 'rem') {
+    return unit(value, u)
+  } else {
+    return unit(value / base-font-size, 'rem')
+  }
+
+.centered-img
+    width: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+clfix()
+  &:after
+    display block
+    content ""
+    clear both
+
+.clfix
+  clfix()

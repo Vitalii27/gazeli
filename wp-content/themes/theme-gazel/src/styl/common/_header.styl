@@ -1,0 +1,277 @@
+/*-----------------------------------------------------------------------------
+ *  HEADER
+ * ------------------------------------------------------------------------- */
+.header
+    width 100%
+
+    &__top
+        padding: 10px 0
+        color inherit
+        transition all 0.2s linear
+
+    &__menu
+        background-color color-two
+        color: #fff
+        position relative
+
+    .b-worktime
+        @media md
+            display: none
+
+    .b-phones
+        @media md
+            line-height: 1.4
+
+    .b-logotype
+        img
+            transition all 0.2s linear
+            @media md
+                max-height: 50px
+                width auto
+
+.s-hero .header
+
+    &__top
+        position relative
+        z-index: 1
+        color #fff
+
+        &:before
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background-color: #1c162b
+            opacity: 0.55
+            z-index: -1
+
+    .b-phones--block
+        a
+            color #ac92e5
+            &:hover
+                color lighten(#ac92e5, 20%)
+
+    &.headroom--not-top .header__top:before
+        opacity 0.9
+
+.headroom
+    transition all 0.2s linear
+    z-index 10
+
+    &--not-top
+        position fixed
+        top 0
+        left 0
+
+        .header__top
+            padding 0
+            background-color #fff
+
+        .b-logotype
+            img
+                height 50px
+                width auto
+
+
+
+.h-button
+    font-size: rem-calc(14px)
+    padding: 12px 22px 9px
+    @media md
+        margin-top: 10px
+
+.main-nav
+    display: flex
+    justify-content: space-between
+    @media md
+        flex-direction: column
+        justify-content: flex-start
+        background-color: color-two
+        position: fixed
+        top: 0
+        right: 0
+        width 100%
+        height 100%
+        overflow-y auto
+        z-index: 5
+        padding: 20px 20px 12px 20px
+        transition: all 0.2s linear
+        visibility hidden
+        opacity 0
+        max-height 0
+
+    &.active
+        visibility visible
+        opacity 1
+        max-height none
+
+    li
+        font-size: rem-calc(20px)
+        font-weight: 700
+        text-transform: uppercase
+        padding 5px 0
+
+        .sub-menu li
+            font-size 14px
+
+        a
+            display inline-block
+            padding: 8px 5px
+            color: #fff
+            &:hover
+                color: rgba(#fff, 0.6)
+
+        &.menu-item-has-children
+            position relative
+
+            .sub-menu
+                position absolute
+                top 100%
+                left 0
+                width 240px
+                background-color color-two
+                z-index 2
+                box-shadow 0 0 20px 0 alpha(#000,0.1)
+                display none
+                @media md
+                    position relative
+                    top auto
+                    left auto
+                    width 100%
+                    box-shadow none
+
+                li
+                    padding-left 10px
+                    padding-right 10px
+                    font-weight normal
+                    text-transform none
+
+                    &.menu-item-has-children
+                        &:before
+                            content ''
+                            display block
+                            width 13px
+                            height 8px
+                            background-repeat no-repeat
+                            background-position center
+                            background-size contain
+                            background-image url(base-img-path+'icons/select.png')
+                            position absolute
+                            right 10px
+                            top 50%
+                            transform translateY(-50%) rotate(-90deg)
+                            @media md
+                                top 16px
+                                right 15px
+                                transform translateY(0) rotate(0deg)
+
+                        .sub-menu
+                            top 0
+                            left 100%
+                            width 100%
+                            @media md
+                                left auto
+                                top auto
+
+            &:hover
+                & > .sub-menu
+                    display block
+                    @media md
+                        display none
+
+            &.active
+                & > .sub-menu
+                    display block
+
+        .menu-item-object-region
+            &:hover .sub-menu
+                height 350px
+                overflow-y auto
+
+
+.b-regions
+    position relative
+    visibility hidden
+    opacity 0
+    transition all 0.2s linear
+    &.active
+        visibility visible
+        opacity 1
+
+.regions-list
+    position: absolute
+    top 5px
+    right 0
+    z-index 5
+    width: 220px
+    background-color #fff
+    text-align: left
+
+    li
+        border-bottom 1px solid rgba(color-main, 0.3)
+
+        & > a
+            color color-main
+            padding 15px
+            display block
+            &:hover
+                background-color color-base
+                color #fff
+
+// Page hero
+.page-hero
+    background-color #ccc
+    color #fff
+    padding 25px 0
+    background-repeat no-repeat
+    background-position center
+    background-size cover
+    min-height 316px
+    position relative
+    z-index 1
+    @media lg
+        min-height auto
+
+    &--big
+        min-height 490px
+        @media xl
+            min-height 290px
+        @media lg
+            min-height auto
+
+    &--padding
+        padding 75px 0
+        @media lg
+            padding 30px 0
+
+    &:before
+        content ''
+        display block
+        width 100%
+        height 100%
+        position absolute
+        top 0
+        left 0
+        background-color #362069
+        opacity 0.8
+        z-index -1
+
+    .b-title
+        color inherit
+        margin-bottom 60px
+        @media sm
+            margin-bottom 30px
+
+    .b-hero-title
+        color color-two
+
+        &__top
+            color #ffda69
+
+        &__bottom
+            font-weight 400
+            strong
+                color #fff

@@ -1,0 +1,171 @@
+//
+// ─── SECTION: PARK ───────────────────────────────────────────────────────────────
+//
+.s-park
+    padding 60px 0 0
+    @media md
+        padding 30px 0 0
+
+.b-park
+    &__tabs
+        margin-bottom 40px
+
+.park-tabs
+    display flex
+    justify-content space-between
+    border-bottom 3px solid color-base
+    @media sm
+        flex-direction column
+
+    &__item
+        font-size rem-calc(24px)
+        font-family font-heuristica
+        color #363636
+        position relative
+        padding 0 0 15px
+        cursor pointer
+        transition all 0.2s linear
+        &:hover
+            color color-base
+        @media md
+            font-size 1.2rem
+            padding 10px
+        @media md
+            font-size 1rem
+        &:after
+            content ''
+            display block
+            width 0
+            height 0
+            border-style solid
+            border-color transparent
+            border-width 0 (25/2)px 11px
+            position absolute
+            bottom 0
+            left 50%
+            transform translateX(-50%)
+            @media sm
+                display none
+
+        &.active
+            color color-base
+            &:after
+                border-bottom-color color-base
+            @media sm
+                background-color color-base
+                color #fff
+
+.b-car
+
+    &.active
+        padding 0 0 30px
+        margin-bottom 50px
+        border-bottom 1px solid #b3b3b3
+        &:last-child
+            border-bottom 0
+        @media sm
+            padding-bottom 15px
+            margin-bottom 15px
+
+
+    &__title
+        color #151515
+        font-size rem-calc(24px)
+        text-transform uppercase
+        font-weight 900
+        margin-bottom 40px
+        @media md
+            margin-bottom 30px
+
+    &__subtitle
+        color color-base
+        font-weight bold
+        margin-bottom 25px
+        @media md
+            margin-bottom 15px
+
+    &__row
+        margin 0 -30px
+
+        .col
+            padding 0 30px
+            @media md
+                margin-bottom 15px
+
+    &__img
+        height 100%
+        background-repeat no-repeat
+        background-position center
+        background-size contain
+        display flex
+        align-items: center
+        justify-content: center
+
+        img
+            width 100%
+            height auto
+            @media xs
+                max-width 80%
+
+    &__size
+        height 100%
+        position relative
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        @media sm
+            display none
+
+    &__content
+        margin-bottom 30px
+        @media md
+            margin-bottom 15px
+
+    &__button
+        padding 10px 25px
+
+.car-size
+    width 185px
+    height 147px
+    background-repeat no-repeat
+    background-position center
+    background-size contain
+    position relative
+    font-weight 500
+
+    &__lenght
+        position absolute
+        bottom 0
+        left 68%
+
+    &__width
+        position absolute
+        bottom 0
+        right 82%
+
+    &__height
+        position absolute
+        top 60%
+        right 65%
+
+.table-car
+    &__row
+        display flex
+        justify-content space-between
+        margin-bottom 10px
+
+    &__name
+        padding-right 2px
+
+    &__spacer
+        flex-grow 1
+        border-bottom 1px solid #ccc
+        position relative
+        top -3px
+
+    &__value
+        color color-base
+        font-weight bold
+        padding-left 2px
+        text-align right

@@ -1,0 +1,126 @@
+extends ../layout/_layout
+
+block variables
+    - var title = 'Главная'
+
+block header
+
+block content
+    section.s-hero(style="background-image:url("+IMG_PATH+"hero.jpg);")
+        include ../layout/_header
+        .grid.grid--container
+            .s-hero__body
+                .row
+                    .col.col--lg-7
+                        h1.b-hero-title
+                            span.b-hero-title__top Гарантия страховки
+                            span.b-hero-title__bottom перевозимого груза #[strong 1.5 млн]
+
+                        ul.b-hero-advantage
+                            li.b-hero-advantage__item #[+svg('calendar').icon.icon-calendar] Более 10 лет на #[em рынке грузоперевозок]
+                            li.b-hero-advantage__item #[+svg('car').icon.icon-car] Перевозка #[em без посредников]
+                            li.b-hero-advantage__item #[+svg('timer').icon.icon-timer] #[em Мы работаем] без выходных
+                    // .col
+
+                    .col.col--lg-5.text--sm-right
+                        .b-hero-action
+                            .b-hero-action__inner
+
+                                .b-hero-action__title #[span.accent Закажите газель]#[br]прямо сейчас
+                                .b-hero-action__text И получите #[span.accent 1 час] работы грузчика бесплатно!
+
+                                form.b-hero-action__form.b-form(data-validate)
+                                    input(type="text", name="mouse", value="", style="display:none;")
+                                    input(type="hidden", name="page", value="")
+                                    .b-form__success Спасибо!#[br]Ваша заявка отправлена
+                                    .b-form__body
+                                        .b-form__group
+                                            input.b-form__control.input-bordered(type="text", name="name", placeholder="Ваше имя", required)
+                                        .b-form__group
+                                            input.b-form__control.input-bordered(type="tel", name="tel", placeholder="Ваш телефон", required)
+                                        .b-form__group
+                                            input.b-form__control.input-bordered(type="email", name="email", placeholder="E-mail")
+                                        .b-form__group
+                                            label.checkbox
+                                                input.checkbox__input.hidden-input(type="checkbox" name="agreement" required)
+                                                span.checkbox__label #[+svg('check').icon.icon-check] Согласен с #[a(href="#") Пользовательским соглашением]
+                                        .b-form__group
+                                            button.button.button--round.button--white(type="submit") Отправить
+                        // .b-hero-action
+                    // .col
+                // .row
+            // .s-hero__body
+        // .grid
+        .s-hero__triangle-one
+        .s-hero__triangle-two
+    // .SECTION-HERO
+
+    include ../blocks/_calc
+
+    include ../blocks/_services
+
+    section.s-about#about
+        .grid.grid--container
+            .s-about__body
+                span.line-circle.s-about__decor
+
+                .s-about__item.row
+                    .col.col--lg-2
+                        .b-title О нас
+                    .col.col--lg-10
+                        .s-about__content
+                            .text-content
+                                img.alignright(src=IMG_PATH+'directions.png', width="320" alt="img")
+                                h4 Компания «ГАЗЕЛЬ 15» была основана в 2005 году, когда была приобретена наша первая грузовая автомашина.
+                                p Основным видом деятельности нашей компании являются грузоперевозки малотоннажными грузовыми автомобилями по Москве, Московской области и России. На данный момент в автопарке нашей компании насчитывается несколько десятков машин.
+                    // .col
+                                    //- .col.col--lg-3.col--md-5
+                                    //-     .b-fact-green
+                                    //-         span.b-fact-green__text более
+                                    //-         span.b-fact-green__num 3000
+                                    //-         span.b-fact-green__text направлений первозок
+                                    //-     // .b-fact-green
+                                    //- // .col
+                // .s-about__item
+
+                .s-about__item.row
+                    .col.col--xs-12
+                        .s-about__content
+                            .text-content
+                                img.alignleft(src=IMG_PATH+'garanty.png', width="363", alt="img")
+                                p В 2008 году для удобства наших клиентов был создан этот сайт, который значительно сокращает время от момента, когда заказчик только ищет автомобиль, до момента осуществления перевозки.
+                                p В разное время нашими заказчиками являлись крупные российские и зарубежные компании, такие как Техносан, киноконцерн “Мосфильм”, Связной, Лореаль, Пони Экспресс, Юст Групп. Многие из них и по сей день пользуются нашими услугами.
+                                p Мы стараемся максимально подстроиться под потребности наших заказчиков. Для этого наша компания оказывает не только весь спектр сопутствующих грузоперевозкам услуг, но и в соответствии с пожеланиями клиента и спецификой его груза предоставляет нужный ему транспорт. Для улучшения качества наших перевозок все автомобили оснащены спутниковыми системами слежения.
+
+                            .b-advantage-grid
+                                .b-advantage-grid__title.text--xs-center.text--md-left С нами Вы доставите груз:
+                                .b-advantage-grid__row
+                                    .b-advantage-grid__item
+                                        +svg('medal').icon.icon-medal.b-advantage-grid__icon
+                                        .b-advantage-grid__text Вовремя
+                                    .b-advantage-grid__item
+                                        +svg('hand').icon.icon-hand.b-advantage-grid__icon
+                                        .b-advantage-grid__text Дешевле
+                                    .b-advantage-grid__item
+                                        +svg('compas').icon.icon-compas.b-advantage-grid__icon
+                                        .b-advantage-grid__text В любое место
+                                    .b-advantage-grid__item
+                                        +svg('prize').icon.icon-prize.b-advantage-grid__icon
+                                        .b-advantage-grid__text С гарантией
+                            // .b-advantage-grid
+                        // .s-about__content
+                    // .col
+                // .s-about__item
+
+        // .grid
+    // .SECTION-ABOUT
+
+    include ../blocks/_workpath
+
+    include ../blocks/_promo
+
+    include ../blocks/_clients
+
+
+block footer
+    include ../layout/_footer

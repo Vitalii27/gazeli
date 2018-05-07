@@ -1,0 +1,26 @@
+mixin service_item_tpl(_image, _price, _title, _link, _icon)
+    .col.col--md-4.col--md-flex
+        .service-card
+            .service-card__img(style="background-image:url("+IMG_PATH+"services/"+_image+");")
+                .service-card__price.hexagon(style="background-image:url("+IMG_PATH+"icons/"+_icon+");")
+                    .hexagon__one: .hexagon__two
+            .service-card__body
+                .service-card__name #{_title}
+            .service-card__footer
+                a.service-card__link.button.button--round.button--base(href= _link) Подробнее
+        // .service-card
+    // .col
+
+mixin service_item(item)
+    - item = item || {};
+    - item.img = item.img || '';
+    - item.price = item.price || '';
+    - item.title = item.title || '';
+    - item.link = item.link || '';
+    - item.icon = item.icon || '';
+
+    +service_item_tpl(item.img, item.price, item.title, item.link, item.icon)
+
+mixin service(...items)
+    each item in items
+        +service_item(item)

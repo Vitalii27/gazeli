@@ -1,0 +1,75 @@
+extends ../layout/_layout
+
+block variables
+    - var title = 'Наши услуги'
+
+block header
+    include ../layout/_header
+
+block content
+    .page-hero(style="background-image:url("+IMG_PATH+"hero/about.jpg);")
+        .grid.grid--container
+
+            .b-crumbs
+                span: a(href="#") Главная
+                span.separator |
+                span #{title}
+            // .b-crumbs
+
+            h1.page-title #{title}
+        // .grid
+    // .page-hero
+
+    .section
+        .grid.grid--container
+            .b-title Наши услуги
+
+            .b-services.row.row--sm-center
+                .col.col--sm-4
+                    a.b-service(href="moscow.html")
+                        .b-service__img(style="background-image:url("+IMG_PATH+"park/gazel.png);")
+                        .b-service__title Грузоперевозки#[br]по Москве
+                    // .b-service
+                // .col
+
+                .col.col--md-4
+                    a.b-service(href="russia.html")
+                        .b-service__img(style="background-image:url("+IMG_PATH+"park/gazel-fermer.png);")
+                        .b-service__title Грузоперевозки#[br]по России
+                    // .b-service
+                // .col
+
+                .col.col--sm-4
+                    a.b-service(href="mosobl.html")
+                        .b-service__img(style="background-image:url("+IMG_PATH+"park/gazel-5m.png);")
+                        .b-service__title Грузоперевозки#[br]по Московской области
+                    // .b-service
+                // .col
+
+                .col.col--sm-4
+                    a.b-service(href="moscow.html")
+                        .b-service__img(style="background-image:url("+IMG_PATH+"park/gazel.png);")
+                        .b-service__title Квартирный переезд#[br]в Москве
+                    // .b-service
+                // .col
+
+                .col.col--md-4
+                    a.b-service(href="russia.html")
+                        .b-service__img(style="background-image:url("+IMG_PATH+"park/gazel-fermer.png);")
+                        .b-service__title Дачный переезд
+                    // .b-service
+                // .col
+
+                .col.col--sm-4
+                    a.b-service(href="mosobl.html")
+                        .b-service__img(style="background-image:url("+IMG_PATH+"park/gazel-5m.png);")
+                        .b-service__title Офисный переезд#[br]в Москве
+                    // .b-service
+                // .col
+
+            // .b-services
+        // .grid
+    // .section
+
+block footer
+    include ../layout/_footer

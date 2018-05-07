@@ -1,0 +1,40 @@
+include ../mixins/_mixins
+
+block variables
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv='X-UA-Compatible', content="IE=edge")
+        meta(name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+        meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+        meta(name="keywords" content="")
+        meta(name="description" content="")
+        meta(name="format-detection" content="telephone=no")
+
+        link(rel="stylesheet" type='text/css' href="assets/css/libs.min.css")
+        link(rel="stylesheet" type="text/css" href="assets/fonts/fonts.css")
+        link(rel="stylesheet" type='text/css' href="assets/css/app.css")
+
+        title Газель - #{title}
+
+    body#top
+        <!--[if lte IE 9]>
+        p.browsehappy Вы используете #[strong устаревший] браузер. Пожалуйста #[a(href="http://browsehappy.com/", target="_blank") обновите ваш браузер] чтобы воспользоваться всем функционалом сайта.
+        <![endif]-->
+
+        .wrapper
+            main.main
+                block header
+                block content
+            // .MAIN
+
+            block footer
+        // .WRAPPER
+
+        block modals
+
+        script(src="assets/js/libs.min.js", type="text/javascript")
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU", type="text/javascript")
+        script(src="assets/js/app.js", type="text/javascript")

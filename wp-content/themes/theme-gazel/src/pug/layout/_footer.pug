@@ -1,0 +1,218 @@
+footer.footer#contacts(style="background-image:url("+IMG_PATH+"footer.jpg);")
+
+    .footer__top.text--xs-center
+        .grid.grid--container
+            .row
+                .col.col--md-6.col--md-offset-3
+
+                    .f-logotype: img(src=IMG_PATH+'logotype-reverse.png', alt="logo")
+
+                    p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nulla officiis delectus alias consequuntur enim quis reiciendis aliquid.
+
+        // .grid
+    // .footer__top
+
+    .footer__middle
+        .grid.grid--container
+            .row
+
+                .col.col--lg-3.col--xs-6
+                    .f-block
+                        .f-block__title Контакты
+                        .f-block__body
+                            .b-worktime.b-worktime--inline #[+svg('clock').icon.icon-clock] #[strong Режим работы:]#[br]с 9:00-21:00 ежедневно
+                        .f-block__body
+                            .b-phones.b-phones--inline
+                                strong Телефон:
+                                .b-phones__item
+                                    +svg('phone').icon.icon-phone
+                                    a(href="tel:") +7(495)664-40-29
+                                .b-phones__item
+                                    +svg('whatsapp').icon.icon-whatsapp
+                                    +svg('viber').icon.icon-viber
+                                    a(href="tel:") +7(926)521-67-42
+                    // .f-block
+                // .col
+
+                .col.col--lg-3.col--xs-6
+                    .f-block
+                        .f-block__title Меню
+                        .f-block__body
+                            ul.f-nav
+                                li: a(href="#") Главная
+                                li: a(href="#") Услуги
+                                li: a(href="#") Тарифы
+                                li: a(href="#") Калькулятор
+                                li: a(href="#") О нас
+                                li: a(href="#") Автопарк
+                                li: a(href="#") Акции
+                                li: a(href="#") Контакты
+                                li: a(href="#") Поиск
+                    // .f-block
+                // .col
+
+                .col.col--lg-3.col--md-6
+                    .f-block
+                        .f-block__title О компании
+                        .f-block__body
+                            .f-about
+                                .f-about__img(style="background-image:url("+IMG_PATH+"f-about.jpg);")
+                                .f-about__body
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, assumenda?
+                                    .f-about__body-footer
+                                        a.f-about__link(href="#") Подробнее
+                    // .f-block
+                // .col
+
+                .col.col--lg-3.col--md-6
+                    .f-block
+                        .f-block__title Обратная связь
+                        .f-block__body
+                            form.b-form.f-form(action="#", data-validate)
+                                input(type="text", name="mouse", value="", style="display:none;")
+                                input(type="hidden", name="page", value="")
+                                .b-form__success Спасибо!#[br]Ваша заявка отправлена
+                                .b-form__body
+                                    .b-form__group
+                                        input.b-form__control(type="text", name="name", placeholder="Имя", required)
+                                    .b-form__group
+                                        input.b-form__control(type="tel", name="tel", placeholder="Телефон", required)
+                                    .b-form__group
+                                        textarea.b-form__control.b-form__control--textarea(name="msg", placeholder="Сообщение")
+                                    .b-form__group
+                                        label.checkbox
+                                            input.checkbox__input.hidden-input(type="checkbox" name="agreement" required)
+                                            span.checkbox__label #[+svg('check').icon.icon-check] Согласен с #[a(href="#") Пользовательским соглашением]
+                                    .b-form__group.text--xs-right
+                                        button.b-form__button(type="submit") Заказать звонок
+                    // .f-block
+                // .col
+
+            // .row
+        // .grid
+    // .footer__middle
+
+    .footer__bottom.text--xs-center
+        .grid.grid--container
+            p Copyright 2017. Все права защищены
+        // .grid
+    // .footer__bottom
+
+// .FOOTER
+
+.modal
+  .modal-inner
+    a(data-modal-close, href="javascript:;"): +svg('close').icon.icon-close
+    .modal-content
+// .modal
+
+#callback.hide
+    .b-modal
+        .b-modal__title Заказать звонок
+        form.b-modal__form.b-form(data-validate)
+            input(type="text", name="mouse", value="", style="display:none;")
+            input(type="hidden", name="page", value="")
+            input(type="hidden", name="car", value="")
+            .b-form__success Спасибо!#[br]Ваша заявка отправлена
+            .b-form__body
+                .b-form__group
+                    input.b-form__control(type="text", name="name", placeholder="Ваше имя", required)
+                .b-form__group
+                    input.b-form__control(type="tel", name="tel", placeholder="Введите телефон", required)
+                .b-form__group
+                    label.checkbox
+                        input.checkbox__input.hidden-input(type="checkbox" name="agreement" required)
+                        span.checkbox__label #[+svg('check').icon.icon-check] Согласен с #[a(href="#") Пользовательским соглашением]
+                .b-form__group
+                    button.button.button--round.button--base(type="submit") Заказать звонок
+// #callback
+
+#request.hide
+    .b-modal
+        .b-modal__title Оставить заявку
+        form.b-modal__form.b-form(data-validate)
+            input(type="text", name="mouse", value="", style="display:none;")
+            input(type="hidden", name="page", value="")
+            input(type="hidden", name="calc", value="")
+            .b-form__success Спасибо!#[br]Ваша заявка отправлена
+            .b-form__body
+                .b-form__group
+                    input.b-form__control(type="text", name="name", placeholder="Ваше имя", required)
+                .b-form__group
+                    input.b-form__control(type="email" name="email" placeholder="Ваш e-mail" required)
+                .b-form__group
+                    input.b-form__control(type="tel", name="tel", placeholder="Ваш телефон")
+                .b-form__group
+                    textarea.b-form__control.textarea(name="msg" placeholder="Ваше сообщение")
+                .b-form__group
+                    label.checkbox
+                        input.checkbox__input.hidden-input(type="checkbox" name="agreement" required)
+                        span.checkbox__label #[+svg('check').icon.icon-check] Согласен с #[a(href="#") Пользовательским соглашением]
+                .b-form__group
+                    button.button.button--round.button--base(type="submit") Отправить
+// #request
+
+#carmodal.hide
+    .b-modal
+        .b-car
+            .b-car__title Название машины
+
+            .b-car__row.row
+                .col.col--lg-3.col--md-6
+                    .b-car__img(style="background-image:url("+IMG_PATH+"park/gazel.png);")
+                // .col
+
+                .col.col--lg-3.col--md-6
+                    .b-car__size
+                        .car-size(style="background-image:url("+IMG_PATH+"icons/car-size.png);")
+                            .car-size__lenght 3м
+                            .car-size__width 2м
+                            .car-size__height 1.5м
+                // .col
+
+                .col.col--lg-3.col--md-6
+                    .b-car__subtitle Характеристики автомобиля:
+
+                    .b-car__table.table-car
+                        .table-car__row
+                            .table-car__name Длина
+                            .table-car__spacer
+                            .table-car__value 3м
+                        .table-car__row
+                            .table-car__name Ширина
+                            .table-car__spacer
+                            .table-car__value 2м
+                        .table-car__row
+                            .table-car__name Высота
+                            .table-car__spacer
+                            .table-car__value 1.5м
+                        .table-car__row
+                            .table-car__name Объем
+                            .table-car__spacer
+                            .table-car__value 9м#[sup 3]
+                        .table-car__row
+                            .table-car__name Грузоподъемность
+                            .table-car__spacer
+                            .table-car__value 1500кг
+                        .table-car__row
+                            .table-car__name Вместимость
+                            .table-car__spacer
+                            .table-car__value 4 европаллет
+                        .table-car__row
+                            .table-car__name Вид загрузки
+                            .table-car__spacer
+                            .table-car__value задняя
+                        .table-car__row
+                            .table-car__name Кол-во пассажирских мест
+                            .table-car__spacer
+                            .table-car__value 2
+                // .col
+
+                .col.col--lg-3.col--md-6
+                    .b-car__subtitle Дополнительная информация:
+                    .b-car__content.text-content
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur atque excepturi, necessitatibus totam ipsum modi.
+                // .col
+        // .b-car
+    // .b-modal
+// #carmodal

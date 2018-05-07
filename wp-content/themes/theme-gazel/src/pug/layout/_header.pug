@@ -1,0 +1,69 @@
+header.header#headroom
+    .menu-icon#menu-toggle #[span]#[span]#[span]
+    .header__top
+        .grid.grid--container
+            .row.row--xs-center
+                .col.col--xl-3.col--lg-2.col--md-5.col--sm-5.col--xs-5.text--xs-center.text--lg-left
+                    .b-logotype
+                        a(href="index.html"): img(src= IMG_PATH + 'logotype.png', alt="logo")
+
+                .col.col--lg-3.col--xs-1
+                    .b-worktime.b-worktime--block #[+svg('clock').icon.icon-clock] Режим работы:#[br]с 9:00-21:00 ежедневно
+
+                .col.col--xl-2.col--lg-3.col--md-6.col--sm-6.col--xs-6
+                    .b-phones.b-phones--block
+                        .b-phones__item
+                            +svg('phone').icon.icon-phone
+                            a(href="tel:") +7(495)664-40-29
+                        .b-phones__item
+                            +svg('whatsapp').icon.icon-whatsapp
+                            +svg('viber').icon.icon-viber
+                            a(href="tel:") +7(926)521-67-42
+
+                .col.col--lg-2.col--sm-6.col--xs-7.text--xs-center.col--lg-right
+                    a.button.button--round.button--base.h-button(href="#callback", data-modal-open) Заказать звонок
+
+                .col.col--lg-2.col--sm-6.col--xs-5.text--xs-center.text--lg-right
+                    a.button.button--round.button--base.h-button#btn-regions(href="#") Регионы
+                    .b-regions#b-regions
+                        ul.regions-list
+                            li: a(href="#") Московская область
+                            li: a(href="#") Владимирская область
+                            li: a(href="#") Тверская область
+                            li: a(href="#") Московская область
+                            li: a(href="#") Владимирская область
+                            li: a(href="#") Тверская область
+        // .grid
+    // .header__top
+
+    .header__menu
+        .grid.grid--container
+            ul.main-nav#menu
+                li: a(href="index.html") Главная
+                li.menu-item-has-children
+                    a.scroll-anchor(href="#services") Услуги и цены
+                    ul.sub-menu
+                        li: a(href="#") Перевозки по Москве
+                        li: a(href="#") Перевозки по Московской области
+                        li.menu-item-has-children
+                            a(href="#") Перевозки по России
+                            ul.sub-menu
+                                li.menu-item-has-children
+                                    a(href="#") По Рязанской области
+                                    ul.sub-menu
+                                        li: a(href="#") Город
+                                        li: a(href="#") Город
+                                        li: a(href="#") Благовещенск
+
+                        li: a(href="#") Дачные переезды
+                        li: a(href="#") Офисные переезды
+                        li: a(href="#") Квартирные переезды
+                li: a(href="about.html") О нас
+                li: a(href="park.html") Автопарк
+                li: a.scroll-anchor(href="#calc") Калькулятор
+                li: a.scroll-anchor(href="#promo") Акции
+                li: a.scroll-anchor(href="#contacts") Контакты
+        // .grid
+    // .header__menu
+
+// .HEADER
