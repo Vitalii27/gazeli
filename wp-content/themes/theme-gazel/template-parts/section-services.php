@@ -172,7 +172,7 @@
                                 <?php endif; ?>
                                 <?php the_sub_field('gallery_desc') ?>
                                 <a class="car-slider__link service-card__link button button--round button--base"
-                                   href="">Подробнее</a>
+                                   href="http://perevozki-na-gazeli/avtopark">Подробнее</a>
                             </div>
 
 
