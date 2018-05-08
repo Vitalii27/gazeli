@@ -154,8 +154,10 @@
                 wp_reset_postdata(); ?>
 
             </div>
+
             <?php if (have_rows('gallery_elem')): ?>
                 <div class="car-slider">
+                    <div class="b-title">Автомобили для грузоперевозок</div>
                     <div class="car-slider__body">
 
                         <?php while (have_rows('gallery_elem')): the_row(); ?>

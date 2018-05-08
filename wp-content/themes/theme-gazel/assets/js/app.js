@@ -690,7 +690,7 @@ if (document.querySelector('.car-slider')) {
         container: '.car-slider__body',
         items: 3,
         slideBy: 2,
-        autoplay: true,
+        autoplay: false,
         controls: true,
         nav: false,
         mouseDrag: true,

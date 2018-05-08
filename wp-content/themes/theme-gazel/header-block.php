@@ -7,8 +7,10 @@
             <div class="row row--xs-center">
                 <div class="col col--xl-3 col--lg-2 col--md-5 col--sm-5 col--xs-3 text--xs-center text--lg-left">
                     <div class="b-logotype" itemscope itemtype="http://schema.org/Organization">
+                        <p>Junior</p>
                         <?php the_custom_logo(); ?>
                         <?php echo SCF::get_option_meta( 'sitescripts', 'schema' ); ?>
+                        <p>TRANS logistic</p>
                     </div>
                 </div>
 
